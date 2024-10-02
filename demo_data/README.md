@@ -1,0 +1,1 @@
+Download and unzip the **demo_data.zip** file and place the folders in this directory as described in step **3.2** in the global README file

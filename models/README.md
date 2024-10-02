@@ -1,0 +1,1 @@
+Download the **deit_base_underexposure_checkpoint5.pth** file and place it in this directory as described in step **3.1** in the global README file
