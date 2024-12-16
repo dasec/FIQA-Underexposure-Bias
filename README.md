@@ -20,7 +20,7 @@
   <div align="center">
   </div>
 
-  This repository contains the official implementation of the [BIOSIG 2024](https://biosig.de/) paper: **Detection and Mitigation of Bias in Under Exposure Estimation for Face Image Quality Assessment**
+  This repository contains the official implementation of the paper: [Detection and Mitigation of Bias in Under Exposure Estimation for Face Image Quality Assessment](https://ieeexplore.ieee.org/document/10786745)
 
 ## News
 ### October 2024
@@ -146,9 +146,10 @@ If you use this repository and found it useful for your research, please conside
 @inproceedings{Dörsch-FIQA-UnderExposureBias-BIOSIG-2024,
               Author = {A. Dörsch and C. Rathgeb and M. Grimmer and C. Busch},
               Booktitle = {Proc. Intl. Conf. of the Biometrics Special Interest Group ({BIOSIG})},
-              Groups = {ATHENE},
+              Groups = {ATHENE, NGBS},
               Journal = {Conf. of the Biometrics Special Interest Group ({BIOSIG})},
               Month = {September},
+              Pages={1-5},
               Publisher = {IEEE},
               Title = {Detection and Mitigation of Bias in Under Exposure Estimation for Face Image Quality Assessment},
               Year = {2024}
