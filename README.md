@@ -57,7 +57,7 @@ conda activate UnderExposureInference
 ### 3. Download necceccary files
 To download the required PyTorch model and the sample images for demo purposes, proceed as described in the following steps.
 
-**Link**: https://cloud.h-da.de/s/XLSBQ86FkjbmHma
+**Link**: https://cloud.h-da.de/s/8of8Aotr7F5Hy5z
 
 **Password**: 4k74nfeL?yHLoxr#
 
