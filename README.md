@@ -23,6 +23,11 @@
   This repository contains the official implementation of the paper: [Detection and Mitigation of Bias in Under Exposure Estimation for Face Image Quality Assessment](https://ieeexplore.ieee.org/document/10786745)
 
 ## News
+
+### May 2025
+ + Small and tiny model weights to support faster inference and reduce resource usage are now available.
+ + See the [Model Zoo](#model-zoo) section for details on available model.
+
 ### October 2024
  + Inference code and model weights to run our underexposure estimation are now available. 
 
@@ -130,10 +135,32 @@ If you want to run the inference script on your own dataset, you must follow a f
 │       └── ...
 ```
 
-## Model information
+## Base Model information
 We fine-tuned a data-efficient image transformer (DeiT) as described by Touvron et al in <a href="http://proceedings.mlr.press/v139/touvron21a/touvron21a.pdf">Training data-efficient image transformers & distillation through attention</a>.
 
 More information about the model and the model card can be found here: https://huggingface.co/facebook/deit-base-patch16-224.
+
+## Model Zoo
+
+### Base Model
+| Model Name                             | Description                        | Location                            | Parameters |
+|----------------------------------------|------------------------------------|--------------------------------------|------------|
+| `deit_base_underexposure_checkpoint5.pth` | Base model used in the original paper       | `model/`                        | ~86M       |
+
+### Small Models (`additional_models/small_model_checkpoints`)
+| Model Name                       | Description                                                                     | Parameters |
+|----------------------------------|---------------------------------------------------------------------------------|------------|
+| `deit_small_checkpoint6.pth`      | Small model trained with the same data augmentations as the base model                                             | ~22M       |
+| `deit_small_rgb_checkpoint6.pth`  | Small model trained without RandomGrayscale augmentation (RGB-only inputs)                      | ~22M       |
+| `deit_small_sw_checkpoint4.pth`   | Small model trained with RandomGrayscale augmentation (p=1, grayscale-only inputs)               | ~22M       |
+
+### Tiny Models (`additional_models/tiny_model_checkpoints`)
+| Model Name                       | Description                                                                     | Parameters |
+|----------------------------------|---------------------------------------------------------------------------------|------------|
+| `deit_tiny_checkpoint8.pth`       | Tiny model trained with the same data augmentations as the base model                                          | ~5M        |
+| `deit_tiny_rgb_checkpoint8.pth`   | Tiny model trained without RandomGrayscale augmentation (RGB-only inputs)                            | ~5M        |
+| `deit_tiny_sw_checkpoint6.pth`    | Tiny model trained with RandomGrayscale augmentation (p=1, grayscale-only inputs)            | ~5M        |
+
 
 ## Disclaimer
 This model was trained on exclusive high quality synthetic data. Although various augmentations were applied during training, it cannot be ruled out that the model performance varies greatly due to the domain gap in field data. If your data quality and facial images differ greatly from the training data, you may need to customize and fine-tune the model on your data.
